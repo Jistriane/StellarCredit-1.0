@@ -87,6 +87,7 @@ export interface PasskeyWalletActions {
   updateCredentialNickname: (credentialId: string, nickname: string) => Promise<void>;
   clearError: () => void;
   reset: () => void;
+  generateStellarSeed: (credentialId: string) => string;
 }
 
 export interface FreighterPasskeySupport {

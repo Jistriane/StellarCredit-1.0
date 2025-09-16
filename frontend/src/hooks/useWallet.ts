@@ -422,7 +422,7 @@ export const useWallet = () => {
       console.log('✅ Freighter encontrado, verificando API...');
       
       // Verificar se as funções necessárias estão disponíveis
-      if (typeof window.freighter.isAllowed !== 'function') {
+      if (!window.freighter || typeof window.freighter.isAllowed !== 'function') {
         throw new Error('API do Freighter incompleta. Tente recarregar a página.');
       }
       
@@ -553,7 +553,7 @@ export const useWallet = () => {
       console.log('✅ Rabet encontrado, verificando API...');
       
       // Verificar se as funções necessárias estão disponíveis
-      if (typeof window.rabet.connect !== 'function') {
+      if (!window.rabet || typeof window.rabet.connect !== 'function') {
         throw new Error('API do Rabet incompleta. Tente recarregar a página.');
       }
       

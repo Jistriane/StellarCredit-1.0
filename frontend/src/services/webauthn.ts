@@ -100,7 +100,7 @@ export class WebAuthnService {
 
       console.log('🔐 Iniciando registro de passkey:', registrationOptions);
 
-      const registrationResponse = await startRegistration(registrationOptions);
+      const registrationResponse = await startRegistration({ optionsJSON: registrationOptions });
 
       console.log('✅ Passkey registrada com sucesso:', registrationResponse);
 
@@ -178,7 +178,7 @@ export class WebAuthnService {
 
       console.log('🔓 Iniciando autenticação com passkey:', authenticationOptions);
 
-      const authenticationResponse = await startAuthentication(authenticationOptions);
+      const authenticationResponse = await startAuthentication({ optionsJSON: authenticationOptions });
 
       console.log('✅ Autenticação com passkey bem-sucedida:', authenticationResponse);
 

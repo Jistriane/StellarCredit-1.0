@@ -163,7 +163,7 @@ export const usePasskeyStore = create<PasskeyStore>()(
 
           // Gerar keypair Stellar determinístico baseado na passkey
           // Em produção, isso deveria ser mais seguro
-          const seed = this.generateStellarSeed(credentialId);
+          const seed = get().generateStellarSeed(credentialId);
           const keypair = Keypair.fromSecret(seed);
           
           const account: StellarPasskeyAccount = {
@@ -303,7 +303,7 @@ export const usePasskeyStore = create<PasskeyStore>()(
           seed[i] = data[i % data.length] ^ (i + 1);
         }
         
-        return Keypair.fromRawEd25519Seed(seed).secret();
+        return Keypair.fromRawEd25519Seed(Buffer.from(seed)).secret();
       },
     })),
     {

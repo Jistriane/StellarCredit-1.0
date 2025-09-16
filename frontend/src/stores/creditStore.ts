@@ -53,6 +53,10 @@ export interface CreditState {
   availableLoans: LoanOffer[];
   activeLoans: any[]; // TODO: Define proper loan interface
   
+  // Transaction data
+  transactions: any[];
+  analytics: any;
+  
   // UI state
   isUpdatingScore: boolean;
   error: string | null;
@@ -92,6 +96,8 @@ export const useCreditStore = create<CreditState>()(
       lastUpdated: null,
       availableLoans: [],
       activeLoans: [],
+      transactions: [],
+      analytics: null,
       isUpdatingScore: false,
       error: null,
       isStreaming: false,
@@ -185,14 +191,12 @@ export const useCreditStore = create<CreditState>()(
 
       setTransactions: (transactions: any[]) =>
         set((state) => {
-          // Store transactions data for use across components
-          (state as any).transactions = transactions;
+          state.transactions = transactions;
         }),
 
       setAnalytics: (analytics: any) =>
         set((state) => {
-          // Store analytics data for use across components
-          (state as any).analytics = analytics;
+          state.analytics = analytics;
         }),
 
       clearData: () =>
@@ -201,14 +205,14 @@ export const useCreditStore = create<CreditState>()(
           state.scoreHistory = [];
           state.availableLoans = [];
           state.activeLoans = [];
+          state.transactions = [];
+          state.analytics = null;
           state.isLoading = false;
           state.isUpdatingScore = false;
           state.error = null;
           state.isStreaming = false;
           state.streamError = null;
           state.lastUpdated = null;
-          (state as any).transactions = [];
-          (state as any).analytics = null;
         }),
 
       // Computed actions
