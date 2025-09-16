@@ -1,40 +1,174 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌟 Stellar Credit Frontend
 
-## 🚀 Deploy Automático Configurado
-- **Produção**: https://stellar-credit-frontend.vercel.app
-- **Deploy automático ativo** via Vercel + GitHub integration
+Frontend do sistema Stellar Credit - Uma plataforma descentralizada de score de crédito baseada na rede Stellar.
 
-## Getting Started
+## 🚀 Deploy & URLs
 
-First, run the development server:
+- **🌐 Produção**: https://stellar-credit-frontend.vercel.app
+- **🔗 Repositório**: https://github.com/Jistriane/StellarCredit-1.0
+- **📊 Backend API**: https://stellar-credit-backend.vercel.app
+- **⚡ Deploy Automático**: Ativo via Vercel + GitHub
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🛠️ Tecnologias
+
+- **Framework**: Next.js 15.1.4 com App Router
+- **Linguagem**: TypeScript
+- **Styling**: Tailwind CSS + Headless UI
+- **Blockchain**: Stellar SDK + Freighter Wallet
+- **State Management**: Zustand
+- **Autenticação**: WebAuthn (Passkeys)
+- **Deploy**: Vercel com CI/CD automático
+
+## 🌐 Ambiente Testnet
+
+Este frontend está configurado para a **Stellar Testnet**:
+
+```env
+NEXT_PUBLIC_STELLAR_NETWORK=testnet
+NEXT_PUBLIC_API_BASE_URL=https://stellar-credit-backend.vercel.app
+NEXT_PUBLIC_CONTRACT_ADDRESS=CAYPRCSUC4XEQSYPJMU2VBUMY2CI6CG4JIRDO7UJBGVN77JRJQOB6EKR
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **🔗 Contrato**: [Ver no Stellar Expert](https://stellar.expert/explorer/testnet/contract/CAYPRCSUC4XEQSYPJMU2VBUMY2CI6CG4JIRDO7UJBGVN77JRJQOB6EKR)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Desenvolvimento Local
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Pré-requisitos
+- Node.js 18+
+- npm 8+
 
-## Learn More
+### Instalação e Execução
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Instalar dependências
+npm ci
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Executar em desenvolvimento
+npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Build para produção
+npm run build
 
-## Deploy on Vercel
+# Executar produção localmente
+npm start
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Linting e verificação de tipos
+npm run lint
+npm run type-check
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
+
+## 🏗️ Estrutura do Projeto
+
+```
+src/
+├── app/                    # App Router do Next.js
+│   ├── [locale]/          # Páginas internacionalizadas
+│   └── globals.css        # Estilos globais
+├── components/            # Componentes React
+│   ├── auth/             # Componentes de autenticação
+│   ├── dashboard/        # Dashboard e score
+│   ├── elisa/           # Assistente virtual Elisa
+│   ├── passkey/         # Componentes de passkeys
+│   ├── ui/              # Componentes de UI
+│   └── wallet/          # Integração com wallets
+├── hooks/                # Custom hooks
+├── lib/                  # Utilitários e configurações
+├── services/            # Serviços (WebAuthn, etc.)
+├── stores/              # Estados globais (Zustand)
+├── types/               # Definições TypeScript
+└── messages/            # Arquivos de internacionalização
+```
+
+## 🔧 Features Principais
+
+### 📊 Score de Crédito Descentralizado
+- Análise de histórico na blockchain Stellar
+- Score em tempo real baseado em transações
+- Visualização de métricas e análises
+
+### 🔐 Autenticação Multi-Wallet
+- **Freighter**: Extensão principal da Stellar
+- **Rabet**: Wallet móvel e web
+- **Passkeys**: Autenticação biométrica WebAuthn
+
+### 🤖 Assistente Virtual Elisa
+- IA contextual para suporte ao usuário
+- Análise de score e recomendações
+- Suporte a voz e texto
+
+### 📱 Interface Responsiva
+- Design moderno com Tailwind CSS
+- Compatível com mobile, tablet e desktop
+- Modo escuro/claro
+
+### 🌍 Internacionalização
+- Suporte a português e inglês
+- Rotas localizadas
+- Conteúdo adaptado por região
+
+## 🚀 Deploy Automático
+
+O deploy é acionado automaticamente a cada push para `main` que modifique arquivos em `frontend/`:
+
+1. **Build**: TypeScript compilation + Next.js build
+2. **Deploy**: Deploy automático para Vercel
+3. **Update**: URL de produção atualizada
+
+### Configuração Vercel
+
+```json
+{
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm ci"
+}
+```
+
+## 🔐 Segurança
+
+- **WebAuthn**: Autenticação biométrica nativa
+- **Stellar SDK**: Integração segura com blockchain
+- **Environment Variables**: Configurações sensíveis protegidas
+- **TypeScript**: Type safety em tempo de compilação
+
+## 🧪 Scripts Disponíveis
+
+```bash
+# Desenvolvimento
+npm run dev              # Servidor de desenvolvimento
+npm run build           # Build de produção
+npm start              # Executar build localmente
+
+# Qualidade de Código
+npm run lint           # ESLint
+npm run type-check     # TypeScript check
+npm run test           # Jest (quando configurado)
+
+# Análise
+npm run analyze        # Bundle analyzer
+```
+
+## 🤝 Contribuição
+
+1. Fork o repositório
+2. Crie uma branch: `git checkout -b feature/nova-feature`
+3. Commit: `git commit -m 'feat: adicionar nova feature'`
+4. Push: `git push origin feature/nova-feature`
+5. Abra um Pull Request
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+
+## 🆘 Suporte
+
+- **Issues**: [GitHub Issues](https://github.com/Jistriane/StellarCredit-1.0/issues)
+- **Documentação**: `/docs` no repositório principal
+- **Discord**: [Stellar Developers](https://discord.gg/stellardev)
+
+---
+
+**Desenvolvido com ❤️ para a rede Stellar** 🌟
