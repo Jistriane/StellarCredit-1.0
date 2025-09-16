@@ -13,7 +13,7 @@
 
 ### 🏆 Desenvolvido pela equipe **Atlantic Hacking** para **HackMeridian 2025**
 
-![Stellar Credit Dashboard](../frontend/public/stellar-credit-dashboard.png)
+![Stellar Credit Dashboard](../dashboard.jpeg)
 
 ## 📊 Visão Geral do Sistema
 
