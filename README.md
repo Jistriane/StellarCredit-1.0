@@ -435,6 +435,8 @@ The platform supports:
 - [Integration Guide](stellar-credit-integration.md)
 
 #### Technical Documentation
+- [📋 Complete Technical Documentation (PT)](docs/TECHNICAL_DOCUMENTATION.pt.md)
+- [📋 Complete Technical Documentation (EN)](docs/TECHNICAL_DOCUMENTATION.en.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [API Documentation](docs/API_DOCUMENTATION.md)
 - [Deployment Guide](docs/DEPLOYMENT.md)
