@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "STELLAR_NETWORK": "testnet",
+    "STELLAR_HORIZON_URL": "https://horizon-testnet.stellar.org",
+    "CONTRACT_ADDRESS": "CAYPRCSUC4XEQSYPJMU2VBUMY2CI6CG4JIRDO7UJBGVN77JRJQOB6EKR",
+    "AI_SERVICE_URL": "https://stellar-credit-ai.vercel.app",
+    "FRONTEND_URL": "https://stellar-credit-frontend.vercel.app",
+    "LOG_LEVEL": "info",
+    "RATE_LIMIT_WINDOW": "15",
+    "RATE_LIMIT_MAX_REQUESTS": "100",
+    "JWT_EXPIRES_IN": "24h",
+    "BCRYPT_ROUNDS": "12",
+    "MOCK_DATA_ENABLED": "true",
+    "SWAGGER_ENABLED": "true"
+  }
+}

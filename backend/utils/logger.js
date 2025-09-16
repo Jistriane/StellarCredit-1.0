@@ -53,29 +53,8 @@ const transports = [
   }),
 ];
 
-// Adicionar file transports em produção
-if (process.env.NODE_ENV === 'production') {
-  // Log de erros
-  transports.push(
-    new winston.transports.File({
-      filename: path.join(process.cwd(), 'logs', 'error.log'),
-      level: 'error',
-      format: fileFormat,
-      maxsize: 5242880, // 5MB
-      maxFiles: 5,
-    })
-  );
-
-  // Log combinado
-  transports.push(
-    new winston.transports.File({
-      filename: path.join(process.cwd(), 'logs', 'combined.log'),
-      format: fileFormat,
-      maxsize: 5242880, // 5MB
-      maxFiles: 5,
-    })
-  );
-}
+// Em ambientes serverless como Vercel, usar apenas console
+// File transports não funcionam em funções serverless
 
 // Criar logger
 const logger = winston.createLogger({
@@ -106,21 +85,6 @@ logger.api = (method, endpoint, status, duration) => {
   logger.http(`API [${method}] ${endpoint} - ${status} (${duration}ms)`);
 };
 
-// Capturar exceções não tratadas
-if (process.env.NODE_ENV === 'production') {
-  logger.exceptions.handle(
-    new winston.transports.File({ 
-      filename: path.join(process.cwd(), 'logs', 'exceptions.log'),
-      format: fileFormat
-    })
-  );
-
-  logger.rejections.handle(
-    new winston.transports.File({ 
-      filename: path.join(process.cwd(), 'logs', 'rejections.log'),
-      format: fileFormat
-    })
-  );
-}
+// Em serverless, logs vão para stdout/stderr (Vercel console)
 
 module.exports = logger;
