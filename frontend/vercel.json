@@ -4,7 +4,6 @@
   "outputDirectory": ".next",
   "installCommand": "npm ci",
   "devCommand": "npm run dev",
-  "rootDirectory": "frontend",
   "git": {
     "repoId": "Jistriane/StellarCredit-1.0"
   },
