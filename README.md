@@ -2,6 +2,8 @@
 
 ### 🏆 Desenvolvido pela equipe **Atlantic Hacking** para **HackMeridian 2025**
 
+![Stellar Credit Dashboard](frontend/public/stellar-credit-dashboard.png)
+
 *[English](#english) | [Português](#português)*
 
 ---
@@ -243,6 +245,8 @@ Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICEN
 ---
 
 ## 🇺🇸 English
+
+![Stellar Credit Dashboard](frontend/public/stellar-credit-dashboard.png)
 
 ### 📋 Overview
 
