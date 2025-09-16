@@ -1,6 +1,10 @@
 /**
  * Logger configurado para Stellar Credit
  * Sistema de logging centralizado com diferentes níveis
+ * 
+ * Desenvolvido por: Atlantic Hacking HackMeridian 2025
+ * Data: 2025
+ * Hackathon: Stellar Meridian 2025
  */
 
 const winston = require('winston');

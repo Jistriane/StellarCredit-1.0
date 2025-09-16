@@ -1,6 +1,10 @@
 /**
  * Stellar Credit Backend Server
  * API REST para integração com smart contracts Soroban e sistema de IA
+ * 
+ * Desenvolvido por: Atlantic Hacking HackMeridian 2025
+ * Data: 2025
+ * Hackathon: Stellar Meridian 2025
  */
 
 const express = require('express');

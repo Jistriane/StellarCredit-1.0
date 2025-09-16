@@ -1,3 +1,12 @@
+/*!
+ * Stellar Credit Smart Contract
+ * Sistema de Score de Crédito Descentralizado - Soroban Contract
+ * 
+ * Desenvolvido por: Atlantic Hacking HackMeridian 2025
+ * Data: 2025
+ * Hackathon: Stellar Meridian 2025
+ */
+
 #![no_std]
 
 use soroban_sdk::{

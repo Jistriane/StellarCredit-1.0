@@ -242,3 +242,7 @@ vercel env pull
 ---
 
 **Deploy automático do backend Stellar Credit ativo e funcionando perfeitamente!** 🚀
+
+---
+
+**Desenvolvido pela equipe Atlantic Hacking para HackMeridian 2025**

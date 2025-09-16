@@ -1,5 +1,7 @@
 # 🌟 Stellar Credit - Plataforma de Score de Crédito Descentralizada
 
+### 🏆 Desenvolvido pela equipe **Atlantic Hacking** para **HackMeridian 2025**
+
 *[English](#english) | [Português](#português)*
 
 ---
@@ -236,7 +238,7 @@ Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICEN
 
 ---
 
-**Desenvolvido com ❤️ para o Hackathon Meridian 2024**
+**Desenvolvido com ❤️ pela equipe Atlantic Hacking para o Hackathon Meridian 2025**
 
 ---
 
@@ -442,7 +444,7 @@ The platform supports:
 - [Backend Vercel Deploy](docs/BACKEND_VERCEL_DEPLOY.md)
 - [Vercel Configuration](docs/VERCEL_DEPLOY_CONFIG.md)
 
-### 🏆 For Hackathon Meridian 2024
+### 🏆 For Hackathon Meridian 2025 - Atlantic Hacking Team
 
 #### Demo Script (5 minutes)
 1. **Minute 1**: Present financial exclusion problem
@@ -470,4 +472,4 @@ The platform supports:
 
 This project is licensed under the MIT License.
 
-**Developed with ❤️ for Hackathon Meridian 2024**
+**Developed with ❤️ by Atlantic Hacking team for Hackathon Meridian 2025**

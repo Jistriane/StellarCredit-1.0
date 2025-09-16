@@ -1,3 +1,12 @@
+/**
+ * Stellar Credit - Dashboard Component
+ * Sistema de Score de Crédito Descentralizado
+ * 
+ * Desenvolvido por: Atlantic Hacking HackMeridian 2025
+ * Data: 2025
+ * Hackathon: Stellar Meridian 2025
+ */
+
 'use client';
 
 import { useEffect, useState } from 'react';

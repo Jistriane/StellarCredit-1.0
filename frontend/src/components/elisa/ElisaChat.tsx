@@ -98,7 +98,7 @@ export function ElisaChat({ className = '', fullscreen = false, onClose }: Elisa
       const response = await sendMessage(content, {
         context: {
           currentPage: window.location.pathname,
-          userWallet: localStorage.getItem('stellar-credit-wallet'),
+          userWallet: localStorage.getItem('stellar-credit-wallet') ?? undefined,
           timestamp: new Date().toISOString()
         }
       });

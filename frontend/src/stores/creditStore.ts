@@ -1,3 +1,12 @@
+/**
+ * Stellar Credit - Credit Store
+ * Sistema de Score de Crédito Descentralizado
+ * 
+ * Desenvolvido por: Atlantic Hacking HackMeridian 2025
+ * Data: 2025
+ * Hackathon: Stellar Meridian 2025
+ */
+
 import { create } from 'zustand';
 import { immer } from 'zustand/middleware/immer';
 import { subscribeWithSelector } from 'zustand/middleware';

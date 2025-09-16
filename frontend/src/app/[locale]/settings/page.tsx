@@ -32,7 +32,7 @@ export default function SettingsPage() {
   const { theme, setTheme } = useTheme();
   const { isConnected, publicKey, walletType } = useWalletStore();
   
-  const [activeTab, setActiveTab] = useState<'general' | 'security' | 'notifications' | 'privacy'>('general');
+  const [activeTab, setActiveTab] = useState<'general' | 'security' | 'notifications' | 'privacy' | 'passkeys'>('general');
   const [settings, setSettings] = useState({
     emailNotifications: true,
     pushNotifications: false,

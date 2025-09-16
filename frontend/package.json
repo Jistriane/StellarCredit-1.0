@@ -1,7 +1,7 @@
 {
   "name": "stellar-credit-frontend",
   "version": "1.0.0",
-  "description": "Frontend para Stellar Credit - Sistema de Score de Crédito Descentralizado",
+  "description": "Frontend para Stellar Credit - Sistema de Score de Crédito Descentralizado - Desenvolvido por Atlantic Hacking HackMeridian 2025",
   "private": true,
   "scripts": {
     "dev": "next dev",

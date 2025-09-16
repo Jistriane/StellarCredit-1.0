@@ -180,3 +180,7 @@ DATABASE_URL=./data/stellar_credit.db
 ---
 
 **🎉 Stellar Credit está 100% deployado automaticamente e pronto para demonstração!** 🚀
+
+---
+
+**Desenvolvido com ❤️ pela equipe Atlantic Hacking para HackMeridian 2025**

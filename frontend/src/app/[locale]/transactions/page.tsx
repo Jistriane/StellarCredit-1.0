@@ -261,7 +261,7 @@ function TransactionsContent() {
             className="space-y-4"
           >
             <AnimatePresence>
-              {filteredTransactions.map((transaction, index) => (
+              {filteredTransactions.map((transaction: Transaction, index: number) => (
                 <motion.div
                   key={transaction.id}
                   initial={{ opacity: 0, y: 20 }}

@@ -128,7 +128,7 @@ export function WalletButton({
 
         {/* Endereço (apenas em telas maiores) */}
         <span className="hidden sm:block font-mono">
-          {formatAddress(publicKey)}
+          {formatAddress(publicKey ?? '')}
         </span>
 
         {/* Saldo (apenas em telas maiores em tamanho lg) */}
@@ -208,7 +208,7 @@ export function WalletButton({
                   </div>
                   <div className="flex items-center space-x-2">
                     <code className="flex-1 text-xs font-mono bg-muted rounded px-2 py-1 text-foreground break-all">
-                      {formatAddress(publicKey, 8, 8)}
+                      {formatAddress(publicKey ?? '', 8, 8)}
                     </code>
                     <Button
                       variant="ghost"

@@ -1,6 +1,10 @@
 """
 API Server para o Sistema de IA de Crédito Stellar
 FastAPI server que expõe endpoints para análise de crédito
+
+Desenvolvido por: Atlantic Hacking HackMeridian 2025
+Data: 2025
+Hackathon: Stellar Meridian 2025
 """
 
 from fastapi import FastAPI, HTTPException, BackgroundTasks

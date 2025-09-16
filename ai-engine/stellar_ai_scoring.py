@@ -1,6 +1,10 @@
 """
 Stellar Credit - Sistema de IA para Análise de Score de Crédito
 Algoritmo avançado que analisa transações on-chain da Stellar para calcular score de crédito
+
+Desenvolvido por: Atlantic Hacking HackMeridian 2025
+Data: 2025
+Hackathon: Stellar Meridian 2025
 """
 
 import numpy as np

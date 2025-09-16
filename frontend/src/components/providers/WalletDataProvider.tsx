@@ -181,19 +181,31 @@ export function WalletDataProvider({ children }: WalletDataProviderProps) {
     // Cap at 850 (excellent credit)
     score = Math.min(score, 850);
 
+    // Map score to risk level
+    const risk_level: 'LOW' | 'MEDIUM' | 'HIGH' = score >= 700 ? 'LOW' : score >= 500 ? 'MEDIUM' : 'HIGH';
+
+    // Recommendations mock
+    const recommendations: string[] = [];
+    if (risk_level !== 'LOW') recommendations.push('Aumente seu saldo médio para melhorar o score');
+    if (transactionCount < 10) recommendations.push('Aumente sua atividade mensal para um histórico mais robusto');
+
     const mockScore = {
       score: Math.round(score),
-      category: score >= 750 ? 'excellent' : score >= 650 ? 'good' : score >= 550 ? 'fair' : 'poor',
-      lastUpdated: Date.now(),
+      risk_level,
       metrics: {
         total_volume_3m: totalBalance * 12, // Annualized
         transaction_count_3m: transactionCount,
         avg_balance: totalBalance,
-        payment_history: transactionCount > 10 ? 95 : transactionCount > 5 ? 80 : 65,
-        account_age_months: 12, // Mock value
-        network_activity: Math.min(transactionCount * 5, 100),
-      }
-    };
+        payment_punctuality: transactionCount > 10 ? 0.95 : transactionCount > 5 ? 0.8 : 0.65,
+        usage_frequency: Math.min(transactionCount / 3, 50),
+        diversification_score: 0.5, // mock diversification
+        age_score: 0.6, // mock account age score
+        network_activity: Math.min(transactionCount / 10, 1),
+      },
+      recommendations,
+      analysis_timestamp: new Date().toISOString(),
+      mock: true,
+    } as const;
 
     return mockScore;
   }, []);
@@ -229,7 +241,7 @@ export function WalletDataProvider({ children }: WalletDataProviderProps) {
         
         // Mock analytics data
         const analyticsData = {
-          monthlySpending: transactions.slice(0, 12).map((_, index) => ({
+          monthlySpending: transactions.slice(0, 12).map((_: any, index: number) => ({
             month: new Date(Date.now() - index * 30 * 24 * 60 * 60 * 1000).toLocaleDateString('pt-BR', { month: 'short' }),
             amount: Math.random() * 1000 + 200,
           })).reverse(),

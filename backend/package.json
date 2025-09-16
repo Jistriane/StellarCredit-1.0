@@ -1,7 +1,7 @@
 {
   "name": "stellar-credit-backend",
   "version": "1.0.0",
-  "description": "Backend API para Stellar Credit - Sistema de Score de Crédito Descentralizado",
+  "description": "Backend API para Stellar Credit - Sistema de Score de Crédito Descentralizado - Desenvolvido por Atlantic Hacking HackMeridian 2025",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -21,7 +21,7 @@
     "soroban",
     "passkeys"
   ],
-  "author": "Stellar Credit Team",
+  "author": "Atlantic Hacking HackMeridian 2025",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",

@@ -2,6 +2,8 @@
 name = "stellar-credit-contract"
 version = "1.0.0"
 edition = "2021"
+authors = ["Atlantic Hacking HackMeridian 2025"]
+description = "Stellar Credit Smart Contract - Sistema de Score de Crédito Descentralizado"
 
 [lib]
 crate-type = ["cdylib"]

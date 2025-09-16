@@ -215,7 +215,7 @@ Visit https://stellar-credit-frontend.vercel.app to see the application running 
 
 ---
 
-**Built with ❤️ for the Stellar network** 🌟
+**Built with ❤️ by Atlantic Hacking for HackMeridian 2025 - Stellar network** 🌟
 
 ---
 

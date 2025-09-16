@@ -1,5 +1,9 @@
 /**
  * Stellar Service - Integração com a rede Stellar
+ * 
+ * Desenvolvido por: Atlantic Hacking HackMeridian 2025
+ * Data: 2025
+ * Hackathon: Stellar Meridian 2025
  * Responsável por interações diretas com Horizon API e validações
  */
 

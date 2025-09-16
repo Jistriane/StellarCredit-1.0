@@ -215,7 +215,7 @@ Acesse https://stellar-credit-frontend.vercel.app para ver a aplicação em func
 
 ---
 
-**Desenvolvido com ❤️ para a rede Stellar** 🌟
+**Desenvolvido com ❤️ pela equipe Atlantic Hacking para HackMeridian 2025 - rede Stellar** 🌟
 
 ---
 
