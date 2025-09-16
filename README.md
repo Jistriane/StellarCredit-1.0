@@ -23,24 +23,44 @@ O **Stellar Credit** é uma solução inovadora que revoluciona o sistema de cr�
 - 🔍 **Transparência Total**: Algoritmo auditável e open-source
 - 🌍 **Suporte Bilíngue**: Interface em português e inglês
 
+## 🚀 Deploy Automático Ativo
+
+### 🌐 URLs de Produção
+- **🖥️ Frontend**: https://stellar-credit-frontend.vercel.app
+- **⚙️ Backend API**: https://stellar-credit-backend.vercel.app
+- **📊 Health Check**: https://stellar-credit-backend.vercel.app/health
+- **🔗 Contrato Testnet**: https://stellar.expert/explorer/testnet/contract/CAYPRCSUC4XEQSYPJMU2VBUMY2CI6CG4JIRDO7UJBGVN77JRJQOB6EKR
+
+### ⚡ CI/CD Automático
+- **Deploy Frontend**: Automático via Vercel + GitHub (qualquer push em `frontend/`)
+- **Deploy Backend**: Automático via Vercel + GitHub (qualquer push em `backend/`)
+- **Build Time**: ~2-3 minutos
+- **Status**: ✅ Totalmente funcional
+
 ## 🛠️ Stack Tecnológica
 
-### Frontend
-- **Next.js 14** + **TypeScript**
-- **TailwindCSS** para design responsivo
-- **Chart.js** para visualizações
-- **Stellar Passkeys** para autenticação
+### Frontend (Next.js)
+- **Framework**: Next.js 15.1.4 + **TypeScript**
+- **Styling**: TailwindCSS + Headless UI
+- **Blockchain**: Stellar SDK + Freighter Wallet
+- **State**: Zustand para gerenciamento de estado
+- **Auth**: WebAuthn (Passkeys) + Multi-wallet
+- **Deploy**: Vercel com CI/CD automático
+- **i18n**: Suporte português/inglês
 
-### Backend
-- **Node.js** + **Express**
-- **Stellar SDK** para integração blockchain
-- **SQLite** para dados locais
-- **Python** para algoritmos de IA
+### Backend (Node.js)
+- **Framework**: Node.js + Express
+- **Blockchain**: Stellar SDK para integração
+- **Database**: SQLite para dados locais
+- **AI Engine**: Python para algoritmos de IA
+- **Deploy**: Vercel serverless functions
+- **Security**: CORS, Rate limiting, JWT
 
 ### Blockchain
-- **Soroban Smart Contracts** (Rust)
-- **Stellar Testnet** para desenvolvimento
-- **Stellar Mainnet** para produção
+- **Smart Contracts**: Soroban (Rust)
+- **Network**: Stellar Testnet (configurado)
+- **Contract ID**: `CAYPRCSUC4XEQSYPJMU2VBUMY2CI6CG4JIRDO7UJBGVN77JRJQOB6EKR`
+- **Explorer**: Stellar Expert integration
 
 ## 🏗️ Arquitetura
 
@@ -100,36 +120,60 @@ O **Stellar Credit** é uma solução inovadora que revoluciona o sistema de cr�
 - **H25-28**: Integração completa
 - **H29-30**: Testes finais e demo prep
 
-## 📦 Instalação e Execução
+## 🌐 Acesso Direto (Recomendado)
+
+### 🚀 Teste Imediatamente
+Acesse diretamente nossa aplicação em produção:
+- **🖥️ App Principal**: https://stellar-credit-frontend.vercel.app
+- **📱 Responsivo**: Funciona em mobile, tablet e desktop
+- **🔗 API**: https://stellar-credit-backend.vercel.app
+
+### ⚡ Como Usar
+1. **Acesse** https://stellar-credit-frontend.vercel.app
+2. **Conecte** sua carteira Stellar (Freighter, Rabet, etc.)
+3. **Analise** seu score automaticamente
+4. **Explore** ofertas de empréstimo personalizadas
+
+## 📦 Desenvolvimento Local (Opcional)
 
 ### Pré-requisitos
 ```bash
-# Instalar Rust e Soroban CLI
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-cargo install --locked soroban-cli
-
 # Node.js e Python
 node --version  # v18+
 python --version  # v3.8+
+
+# Para desenvolvimento de contratos
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+cargo install --locked soroban-cli
 ```
 
-### Setup do Projeto
+### Setup Rápido
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/stellar-credit
-cd stellar-credit
+git clone https://github.com/Jistriane/StellarCredit-1.0
+cd StellarCredit-1.0
 
-# Setup do frontend
+# Iniciar todos os serviços
+./init_system.sh
+
+# URLs locais:
+# Frontend: http://localhost:3000
+# Backend: http://localhost:3001
+# AI Engine: http://localhost:8001
+```
+
+### Deploy Manual (Se Necessário)
+```bash
+# Frontend
 cd frontend
-npm install
-npm run dev
+npm run build
+vercel --prod
 
-# Setup do backend
+# Backend
 cd ../backend
-npm install
-npm run dev
+vercel --prod
 
-# Deploy do smart contract
+# Contrato (já deployado)
 cd ../contracts
 soroban contract deploy --network testnet
 ```
@@ -215,44 +259,101 @@ Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICEN
 - 🔍 **Total Transparency**: Auditable and open-source algorithm
 - 🌍 **Bilingual Support**: Interface in Portuguese and English
 
+## 🚀 Automatic Deploy Active
+
+### 🌐 Production URLs
+- **🖥️ Frontend**: https://stellar-credit-frontend.vercel.app
+- **⚙️ Backend API**: https://stellar-credit-backend.vercel.app
+- **📊 Health Check**: https://stellar-credit-backend.vercel.app/health
+- **🔗 Testnet Contract**: https://stellar.expert/explorer/testnet/contract/CAYPRCSUC4XEQSYPJMU2VBUMY2CI6CG4JIRDO7UJBGVN77JRJQOB6EKR
+
+### ⚡ Automatic CI/CD
+- **Frontend Deploy**: Automatic via Vercel + GitHub (any push to `frontend/`)
+- **Backend Deploy**: Automatic via Vercel + GitHub (any push to `backend/`)
+- **Build Time**: ~2-3 minutes
+- **Status**: ✅ Fully functional
+
 ### 🛠️ Technology Stack
 
-#### Frontend
-- **Next.js 14** + **TypeScript**
-- **TailwindCSS** for responsive design
-- **Chart.js** for visualizations
-- **Stellar Passkeys** for authentication
-- **Bilingual support** (PT/EN)
+#### Frontend (Next.js)
+- **Framework**: Next.js 15.1.4 + **TypeScript**
+- **Styling**: TailwindCSS + Headless UI
+- **Blockchain**: Stellar SDK + Freighter Wallet
+- **State**: Zustand for state management
+- **Auth**: WebAuthn (Passkeys) + Multi-wallet
+- **Deploy**: Vercel with automatic CI/CD
+- **i18n**: Portuguese/English support
 
-#### Backend
-- **Node.js** + **Express**
-- **Stellar SDK** for blockchain integration
-- **SQLite** for local data
-- **Python** for AI algorithms
+#### Backend (Node.js)
+- **Framework**: Node.js + Express
+- **Blockchain**: Stellar SDK for integration
+- **Database**: SQLite for local data
+- **AI Engine**: Python for AI algorithms
+- **Deploy**: Vercel serverless functions
+- **Security**: CORS, Rate limiting, JWT
 
 #### Blockchain
-- **Soroban Smart Contracts** (Rust)
-- **Stellar Testnet** for development
-- **Stellar Mainnet** for production
+- **Smart Contracts**: Soroban (Rust)
+- **Network**: Stellar Testnet (configured)
+- **Contract ID**: `CAYPRCSUC4XEQSYPJMU2VBUMY2CI6CG4JIRDO7UJBGVN77JRJQOB6EKR`
+- **Explorer**: Stellar Expert integration
 
-### 🚀 Quick Start
+## 🌐 Direct Access (Recommended)
 
-#### Prerequisites
+### 🚀 Try Immediately
+Access our production application directly:
+- **🖥️ Main App**: https://stellar-credit-frontend.vercel.app
+- **📱 Responsive**: Works on mobile, tablet and desktop
+- **🔗 API**: https://stellar-credit-backend.vercel.app
+
+### ⚡ How to Use
+1. **Access** https://stellar-credit-frontend.vercel.app
+2. **Connect** your Stellar wallet (Freighter, Rabet, etc.)
+3. **Analyze** your score automatically
+4. **Explore** personalized loan offers
+
+## 📦 Local Development (Optional)
+
+### Prerequisites
 ```bash
-# Install dependencies
+# Node.js and Python
 node --version  # v18+
 python --version  # v3.8+
+
+# For contract development
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+cargo install --locked soroban-cli
 ```
 
-#### Installation
+### Quick Setup
 ```bash
-# Start all services
-./start-stellar-credit.sh
+# Clone repository
+git clone https://github.com/Jistriane/StellarCredit-1.0
+cd StellarCredit-1.0
 
-# Access the application
+# Start all services
+./init_system.sh
+
+# Local URLs:
 # Frontend: http://localhost:3000
 # Backend: http://localhost:3001
-# AI Engine: http://localhost:8000
+# AI Engine: http://localhost:8001
+```
+
+### Manual Deploy (If Needed)
+```bash
+# Frontend
+cd frontend
+npm run build
+vercel --prod
+
+# Backend
+cd ../backend
+vercel --prod
+
+# Contract (already deployed)
+cd ../contracts
+soroban contract deploy --network testnet
 ```
 
 ### 📜 Contract Deployment (Testnet)
@@ -323,15 +424,23 @@ The platform supports:
 
 ### 📚 Documentation
 
+#### Development Guides
 - [Quick Start Guide](QUICK_START.md)
 - [Wallet Support](WALLET_SUPPORT.md)
 - [Bilingual Support](BILINGUAL_SUPPORT.md)
 - [Responsive Design](RESPONSIVE_DESIGN.md)
 - [Logo Guide](LOGO_GUIDE.md)
+- [Integration Guide](stellar-credit-integration.md)
+
+#### Technical Documentation
+- [Architecture](docs/ARCHITECTURE.md)
 - [API Documentation](docs/API_DOCUMENTATION.md)
 - [Deployment Guide](docs/DEPLOYMENT.md)
-- [Integration Guide](stellar-credit-integration.md)
- - [Architecture](docs/ARCHITECTURE.md)
+
+#### Deploy Guides
+- [Frontend Vercel Deploy](docs/FRONTEND_VERCEL_DEPLOY.md)
+- [Backend Vercel Deploy](docs/BACKEND_VERCEL_DEPLOY.md)
+- [Vercel Configuration](docs/VERCEL_DEPLOY_CONFIG.md)
 
 ### 🏆 For Hackathon Meridian 2024
 
